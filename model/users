@@ -1,0 +1,16 @@
+const {users} = require('./connection');
+module.exports =(sequelize,DataTypes)=> {
+
+    const users = sequelize.define("users",{
+        name : {
+            type : DataTypes.STRING,
+            allowNull : false
+        },
+        role : {
+            typr : DataTypes.STRING,
+            allowNull :false
+        }
+    });
+    return users;
+
+};

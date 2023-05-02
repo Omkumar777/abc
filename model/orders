@@ -1,0 +1,20 @@
+const {orders} = require('./connection');
+module.exports =(sequelize,DataTypes)=> {
+
+    const orders = sequelize.define("order",{
+        price : {
+            type : DataTypes.BIGINT,
+            allowNull : false
+        },
+        quantity : {
+            type : DataTypes.INTEGER,
+            allowNull : false
+        },
+        status : {
+            type : DataTypes.STRING,
+            allowNull : false
+        }
+    });
+    return orders;
+
+};
